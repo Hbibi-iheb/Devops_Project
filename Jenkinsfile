@@ -11,5 +11,12 @@ pipeline {
                     credentialsId: 'jenkins-example-github-pat'
             }
         }
+    stage('maven build') {
+steps {
+    script {
+        sh "mvn package -DscriptTests=true"
+    }
+}
+    }
     }
 }
