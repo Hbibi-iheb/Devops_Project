@@ -11,11 +11,7 @@ pipeline {
                     credentialsId: 'jenkins-example-github-pat'
             }
         }
-          stage('Deploy with Docker Compose') {
-            steps {
-                sh 'docker-compose up -d'
-            }
-        } 
+         
           stage('Build Docker Image') {
             steps {
                 script {
@@ -42,6 +38,11 @@ pipeline {
                 }
             }
         }
+         stage('Deploy with Docker Compose') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        } 
        stage('build and test ')
         { steps{
             script{
