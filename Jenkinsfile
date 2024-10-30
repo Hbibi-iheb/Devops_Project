@@ -18,12 +18,12 @@ pipeline {
             sh " mvn test"}
         }
         }
-    stage('maven build') {
+    /*stage('maven build') {
 steps {
     script {
         sh "mvn package -DscriptTests=true"
     }
 }
-    }
+    }*/
     }
 }
