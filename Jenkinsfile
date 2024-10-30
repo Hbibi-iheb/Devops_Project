@@ -39,5 +39,12 @@ steps {
                 
             }
         }
+        stage('nexus'){
+            steps {
+                script {
+                  sh ' mvn deploy -DscriptTests '
+                }
+            }
+        }
     }
 }
