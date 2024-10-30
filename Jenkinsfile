@@ -25,14 +25,19 @@ steps {
     }
 }
     }
-        stage('sonarqube scanner')
-        { steps{
-            WithSonarQubeEnv('sonarqube') {
-            script {
-                sh " mvn sonar:sonar "
+    stage('SonarQube Scanner') {
+            steps {
+                
+                    withSonarQubeEnv('sonarqube') {
+                 script{
+                 
+                    sh "mvn sonar:sonar"
+                 }
+
+
+                }
+                
             }
-        }
-        }
         }
     }
 }
