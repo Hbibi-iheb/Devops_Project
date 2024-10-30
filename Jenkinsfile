@@ -43,7 +43,7 @@ steps {
         stage('nexus'){
             steps {
                 script {
-                  sh ' mvn deploy -DscriptTests '
+                  sh ' mvn deploy -DscriptTests -X '
                 }
             }
         }
