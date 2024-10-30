@@ -11,6 +11,13 @@ pipeline {
                     credentialsId: 'jenkins-example-github-pat'
             }
         }
+        stage('build and test ')
+        { steps{
+            scripts{
+            sh " mvn clean install"
+            sh " mvn test"}
+        }
+        }
     stage('maven build') {
 steps {
     script {
