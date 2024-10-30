@@ -49,6 +49,7 @@ steps {
              stage('Build Docker Image') {
             steps {
                 script {
+                    sh 'mvn clean package -DscriptTests'
                     sh 'docker build -t iheb141/timesheet-devops:1.0.0 .'
                 }
             
