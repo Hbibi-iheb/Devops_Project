@@ -11,6 +11,11 @@ pipeline {
                     credentialsId: 'jenkins-example-github-pat'
             }
         }
+          stage('Deploy with Docker Compose') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        } 
           stage('Build Docker Image') {
             steps {
                 script {
@@ -68,7 +73,7 @@ steps {
         stage('nexus'){
             steps {
                 script {
-                  sh ' mvn deploy -DscriptTests -X '
+                  sh ' mvn deploy  '
                 }
             }
         }
