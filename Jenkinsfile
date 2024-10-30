@@ -25,7 +25,7 @@ steps {
     }
 }
     }
-        stage('sonarqube')
+        stage('sonarqube scanner')
         { steps{
             WithSonarQubeEnv('sonarqube') {
             script {
