@@ -10,9 +10,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-import tn.esprit.spring.repositories.UserRepository;
-import tn.esprit.spring.models.User;
-import tn.esprit.spring.models.Role;
+import tn.esprit.spring.entities.User;
+import tn.esprit.spring.repository.UserRepository;
+import tn.esprit.spring.entities.Role;
 
 import java.util.ArrayList;
 import java.util.Date;
