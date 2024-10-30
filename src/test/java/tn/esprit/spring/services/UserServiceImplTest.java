@@ -9,7 +9,9 @@ import org.junit.jupiter.api.TestMethodOrder; // Pour l'annotation TestMethodOrd
 import org.springframework.beans.factory.annotation.Autowired; // Pour l'annotation Autowired
 import org.springframework.boot.test.context.SpringBootTest; // Pour le test Spring Boot
 import tn.esprit.spring.services.IUserService; // Assurez-vous que ce package existe
-import tn.esprit.spring.models.User; // Assurez-vous que ce package existe
+import tn.esprit.spring.entities.User;
+import tn.esprit.spring.entities.Role;
+
 import java.util.List; // Pour la liste
 
 @SpringBootTest
