@@ -49,7 +49,7 @@ steps {
              stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t iheb141/devops .'
+                    sh 'docker build -t iheb141/timesheet-devops:1.0.0 .'
                 }
             
         }
