@@ -49,8 +49,14 @@ steps {
              stage('Build Docker Image') {
             steps {
                 script {
+                    try{
                     sh 'mvn clean package -DscriptTests'
                     sh 'docker build -t iheb141/timesheet-devops:1.0.0 .'
+                    } catch(e){
+                     echo "Docker build failed: ${e}"
+                        currentBuild.result = 'FAILURE' 
+                        error("Docker image build failed")
+                    }
                 }
             
         }
